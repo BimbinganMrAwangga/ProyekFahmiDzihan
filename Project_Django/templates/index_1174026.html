@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOSTING WEB KEAMANAN SISTEM INFORMASI</title>
+
+    <h1> HOSTING WEB KEAMANAN SISTEM INFORMASI </h1>
+    <h2> Muhammad Fahmi 1174021 - M Dzihan Al-Banna </h2>
+</head>
+
+<body>
+    <form method="POST">
+            {% csrf_token %}
+
+            {{ form.non_field_errors }}
+          
+            {{ form.source.errors }}
+            {{ form.source }}
+        <table>
+            <tr>
+                <td>{{ form.email.label_tag }}</td>
+                <td>{{ form.email }}</td>
+                <td>{{ form.cemail.label_tag }}</td>
+                <td>{{ form.cemail }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.website.label_tag }}</td>
+                <td>{{ form.website }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.phone.label_tag }}</td>
+                <td>{{ form.phone }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.time_zone.label_tag }}</td>
+                <td>{{ form.time_zone }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+                <td>{{ form.cpassword.label_tag }}</td>
+                <td>{{ form.cpassword }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.name.label_tag }}</td>
+                <td>{{ form.name }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.company.label_tag }}</td>
+                <td>{{ form.company }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.address.label_tag }}</td>
+                <td>{{ form.address }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.city.label_tag }}</td>
+                <td>{{ form.city }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.state.label_tag }}</td>
+                <td>{{ form.state }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.zip_code.label_tag }}</td>
+                <td>{{ form.zip_code }}</td>
+            </tr>
+            <tr>
+                <td>{{ form.country.label_tag }}</td>
+                <td>{{ form.country }}</td>
+            </tr>
+            <tr>
+                <td colspan='2'>{{ form.agree }} By checking this box I acknowledge that I have read and agree to the
+                    Cliksor</td>
+            </tr>
+            <tr>
+                <td colspan='2'>{{ form.captcha.label_tag }}</td>
+            </tr>
+            <tr>
+                <td colspan='2'>{{ form.captcha }}</td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+
+</html>
